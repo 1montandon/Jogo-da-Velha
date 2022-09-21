@@ -36,37 +36,52 @@ function verifica_ganhador() {
     if (casa01.innerHTML != "" && casa01.innerHTML === casa02.innerHTML && casa02.innerHTML === casa03.innerHTML) {
         alert(`Temos uma ganhador: ${casa01.innerHTML}`)
         temos_vencedor(casa01.innerHTML)
+        reinicia()
     }
     else if (casa04.innerHTML != "" && casa04.innerHTML === casa05.innerHTML && casa05.innerHTML === casa06.innerHTML) {
         alert(`Temos uma ganhador: ${casa04.innerHTML}`)
         temos_vencedor(casa04.innerHTML)
+        reinicia()
     }
     else if (casa07.innerHTML != "" && casa07.innerHTML === casa08.innerHTML && casa08.innerHTML === casa09.innerHTML) {
         alert(`Temos uma ganhador: ${casa07.innerHTML}`)
         temos_vencedor(casa07.innerHTML)
+        reinicia()
     }
     else if (casa01.innerHTML != "" && casa01.innerHTML === casa04.innerHTML && casa04.innerHTML === casa07.innerHTML) {
         alert(`Temos uma ganhador: ${casa01.innerHTML}`)
         temos_vencedor(casa01.innerHTML)
+        reinicia()
     }
     else if (casa02.innerHTML != "" && casa02.innerHTML === casa05.innerHTML && casa05.innerHTML === casa08.innerHTML) {
         alert(`Temos uma ganhador: ${casa02.innerHTML}`)
         temos_vencedor(casa02.innerHTML)
+        reinicia()
     }
     else if (casa03.innerHTML != "" && casa03.innerHTML === casa06.innerHTML && casa06.innerHTML === casa09.innerHTML) {
         alert(`Temos uma ganhador: ${casa03.innerHTML}`)
         temos_vencedor(casa03.innerHTML)
-
+        reinicia()
     }
     else if (casa01.innerHTML != "" && casa01.innerHTML === casa05.innerHTML && casa05.innerHTML === casa09.innerHTML) {
         alert(`Temos uma ganhador: ${casa01.innerHTML}`)
         temos_vencedor(casa01.innerHTML)
-
+        reinicia()
     }
     else if (casa03.innerHTML != "" && casa03.innerHTML === casa05.innerHTML && casa05.innerHTML === casa07.innerHTML) {
-        alert(`Temos uma ganhador: ${casa01.innerHTML}`)
+        alert(`Temos uma ganhador: ${casa03.innerHTML}`)
         temos_vencedor(casa03.innerHTML1)
+        reinicia()
 
+    }
+    else if (casa01.innerHTML != "" && casa02.innerHTML != "" && casa03.innerHTML != "" && casa04.innerHTML != "" && casa05.innerHTML != "" && casa06.innerHTML != "" && casa07.innerHTML != "" && casa08.innerHTML != "" && casa09.innerHTML != ""){
+        alert(`Deu Velha!`)
+        var img = document.createElement("img");
+        img.src = "queen-elzabeth.gif";
+
+        var div = document.getElementById("x");
+        div.appendChild(img);
+        img.setAttribute("style", "z-index: 3" , "align-content: center", "position: absolute");
     }
 }
 function temos_vencedor(vencedor) {
@@ -92,4 +107,16 @@ function reinicia() {
     casa07.innerHTML = "";
     casa08.innerHTML = "";
     casa09.innerHTML = "";
+    div = "";
+    x.innerHTML = "";
 }
+function reinciaPlacar() {
+    vitoria_X = 0;
+    vitoria_O = 0;
+    placar.innerHTML = `
+    <p> X = ${vitoria_X}</p>
+    <P> O = ${vitoria_O}</P>`
+    div = "";
+    x.innerHTML = "";
+}
+

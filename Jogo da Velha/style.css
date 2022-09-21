@@ -54,3 +54,16 @@ button{
     height: 50px;
     border-radius: 20px;
 }
+#buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#placar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#x{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}

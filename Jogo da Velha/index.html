@@ -10,7 +10,7 @@
 <body>
     <main>
         <div >
-        <H1>Placar</H1>
+        <H1>Jogo da Velha</H1>
         </div>
         <div id="tabuleiro">
         <div class="linha">
@@ -28,14 +28,26 @@
             <div id="casa08" class="casa" onclick="jogada(this);"></div>
             <div id="casa09"class="casa" onclick="jogada(this);"></div>
         </div>
-        
+        <div> 
         <div id="placar" >
             <p> X = 0</p>
             <P> O = 0</P>
         </div>
+        <div id="buttons">
+
         <div>
             <button onclick="reinicia();">Jogar Novamente</button>
         </div>
+        
+        <div> 
+            <button onclick="reinciaPlacar()"> Reiniciar Placar </button> 
+        </div>
+
+        </div>
+
+        </div>
+
+        <div id="x"> </div>
     </main>
     
     <script src="index.js"></script>
